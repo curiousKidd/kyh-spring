@@ -1,13 +1,13 @@
-package hello.hellospring.Service.impl;
+package hello.hellospring.repository.impl;
 
-import hello.hellospring.Service.MemberService;
+import hello.hellospring.repository.MemberRepository;
 import hello.hellospring.domain.Member;
 import org.springframework.stereotype.Repository;
 
 import java.util.*;
 
-@Repository("memberService")
-public class MemberServiceImpl implements MemberService {
+//@Repository()
+public class MemoryMemberRepository implements MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
     private static long seq = 0L;

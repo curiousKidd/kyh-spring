@@ -32,7 +32,6 @@ public class JdbcMemberRepository implements MemberRepository {
             pstmt.executeUpdate();
 
             rs = pstmt.getGeneratedKeys();
-            System.out.println(rs);
 
             if (rs.next()) {
                 member.setId(rs.getLong(1));
